@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concessionária</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">EliteCar</a>
+    <a class="navbar-brand" href="#"><i class="fa-solid fa-car fa-lg"></i class="titulo"> EliteCar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,7 +33,7 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="?page=listar-cliente" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Cliente    
           </a>
           <ul class="dropdown-menu">
@@ -41,12 +46,12 @@
             Modelo    
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="?page=cadastrar-modelo.php">Cadastrar</a></li>
+            <li><a class="dropdown-item" href="?page=cadastrar-modelo">Cadastrar</a></li>
             <li><a class="dropdown-item" href="#">Listar</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Marca    
           </a>
           <ul class="dropdown-menu">
@@ -55,11 +60,11 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="?page=cadastrar-venda" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Venda    
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Cadastrar</a></li>
+            <li><a class="dropdown-item" href="?page=cadastrar-venda">Cadastrar</a></li>
             <li><a class="dropdown-item" href="#">Listar</a></li>
           </ul>
         </li>
