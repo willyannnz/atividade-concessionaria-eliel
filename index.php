@@ -96,8 +96,6 @@
                 case 'salvar-funcionario':
                     include('salvar-funcionario.php');
                     break;
-            }
-            switch(@$_REQUEST["page"]) {
                 //cliente
                 case 'cadastrar-cliente':
                     include('cadastrar-cliente.php');
@@ -111,8 +109,6 @@
                 case 'salvar-cliente':
                     include('salvar-cliente.php');
                     break;
-            }
-            switch(@$_REQUEST["page"]) {
                 //modelo
                 case 'cadastrar-modelo':
                     include('cadastrar-modelo.php');
@@ -126,8 +122,6 @@
                 case 'salvar-modelo':
                     include('salvar-modelo.php');
                     break;
-            }
-            switch(@$_REQUEST["page"]) {
                 //marca
                 case 'cadastrar-marca':
                     include('cadastrar-marca.php');
@@ -141,8 +135,6 @@
                 case 'salvar-marca':
                     include('salvar-marca.php');
                     break;
-            }
-            switch(@$_REQUEST["page"]) {
                 //venda
                 case 'cadastrar-venda':
                     include('cadastrar-venda.php');
