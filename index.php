@@ -82,6 +82,7 @@
     <div class = "row">
         <div class = "col">
             <?php
+            include('config.php');
             switch(@$_REQUEST["page"]) {
                 //funcionario
                 case 'cadastrar-funcionario':
@@ -147,6 +148,9 @@
                     break;
                 case 'salvar-venda':
                     include('salvar-venda.php');
+                    break;
+                  default:
+                    echo "<h1>Bem vindo a ELITE CAR!</h1>";
                     break;
             }
             ?>
