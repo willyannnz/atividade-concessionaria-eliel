@@ -3,22 +3,22 @@
     <input type="hidden" name="acao" value="cadastrar">
     <div class="mb-3">
         <label>Nome
-            <input type="text" name="nome-funcionario" class="form-control">
+            <input type="text" name="nome_funcionario" class="form-control">
         </label>
     </div>
     <div class="mb-3">
         <label>Email
-            <input type="email" name="email-funcionario" class="form-control">
+            <input type="email" name="email_funcionario" class="form-control">
         </label>
     </div>
     <div class="mb-3">
         <label>CPF
-            <input type="text" name="cpf-funcionario" class="form-control">
+            <input type="text" name="cpf_funcionario" class="form-control">
         </label>
     </div>
     <div class="mb-3">
         <label>Telefone
-            <input type="text" name="fone-funcionario" class="form-control">
+            <input type="text" name="fone_funcionario" class="form-control">
         </label>
     </div>
     <div>

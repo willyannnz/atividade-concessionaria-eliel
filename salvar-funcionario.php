@@ -11,7 +11,7 @@
                         nome_funcionario, 
                         cpf_funcionario, 
                         email_funcionario,
-                        fone_funcionario
+                        fone_funcionario)
                         VALUES ('{$nome}', '{$cpf}', '{$email}', '{$fone}')";
                 
             $res = $conn->query($sql);
