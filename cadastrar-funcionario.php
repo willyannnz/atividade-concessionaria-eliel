@@ -1,8 +1,9 @@
+<div class="container mt-4">
 <h1>Cadastrar Funcionário</h1>
 <form action="?page=salvar-funcionario" method="POST">
     <input type="hidden" name="acao" value="cadastrar">
     <div class="mb-3">
-        <label>Nome
+        <label>Nome 
             <input type="text" name="nome_funcionario" class="form-control">
         </label>
     </div>
@@ -24,4 +25,5 @@
     <div>
         <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
+</div>
 </form>
