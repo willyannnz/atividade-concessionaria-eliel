@@ -29,7 +29,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="?page=cadastrar-funcionario">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="#">Listar</a></li>
+            <li><a class="dropdown-item" href="?page=listar-funcionario">Listar</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
