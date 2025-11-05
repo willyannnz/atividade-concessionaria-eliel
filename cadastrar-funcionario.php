@@ -18,7 +18,7 @@
     </div>
     <div class="mb-3">
         <label>Telefone
-            <input type="text" name="telefone-funcionario" class="form-control">
+            <input type="text" name="fone-funcionario" class="form-control">
         </label>
     </div>
     <div>
