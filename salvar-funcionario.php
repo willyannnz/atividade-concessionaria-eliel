@@ -29,14 +29,45 @@
             }
             break;
 
-        case 'editar':
-            //code...
+       case 'editar':
+            $id = $_POST["id_funcionario"];
+            $nome = $_POST["nome_funcionario"];
+            $email = $_POST["email_funcionario"];
+            $cpf = $_POST["cpf_funcionario"];
+            $fone = $_POST["fone_funcionario"];
+
+            $sql = "UPDATE funcionario SET 
+                        nome_funcionario = '{$nome}', 
+                        email_funcionario = '{$email}', 
+                        cpf_funcionario = '{$cpf}', 
+                        fone_funcionario = '{$fone}'
+                    WHERE 
+                        id_funcionario = {$id}";
+            
+            $res = $conn->query($sql);
+
+            if ($res == true) {
+                print "<script>alert('Funcionário atualizado com sucesso!');</script>";
+                print "<script>location.href='?page=listar-funcionario';</script>";
+            } else {
+                print "<script>alert('Não foi possível atualizar.');</script>";
+                print "<script>location.href='?page=listar-funcionario';</script>";
+            }
             break;
+
         case 'excluir':
-            //code...
-            break;
-        default:
-            //code...
+            
+            $sql = "DELETE FROM funcionario WHERE id_funcionario = ".$_REQUEST['id_funcionario'];
+
+            $res = $conn->query($sql);
+
+            if ($res == true) {
+                print "<script>alert('Funcionário excluído com sucesso!');</script>";
+                print "<script>location.href='?page=listar-funcionario';</script>";
+            } else {
+                print "<script>alert('Não foi possível excluir.');</script>";
+                print "<script>location.href='?page=listar-funcionario';</script>";
+            }
             break;
     }
 ?>

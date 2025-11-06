@@ -15,3 +15,6 @@ th {
     text-align: center;
     font-size: 20px ;
 }
+.form-control {
+      width: 80px;
+}
