@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="css/estilo.css">
+
 <div class="container mt-4">
 <h1>Listar Funcionário</h1>
 <?php
@@ -16,6 +18,7 @@
         print "<th>Email</th>";
         print "<th>Telefone</th>"; 
         print "<th>CPF</th>"; 
+        print "<th>Editar ou EXCLUIR</th>"; 
         print "</tr>";
         
         while($row = $res->fetch_object()){
@@ -25,7 +28,12 @@
             print "<td>".$row->email_funcionario."</td>";     
             print "<td>".$row->cpf_funcionario."</td>";
             print "<td>".$row->fone_funcionario."</td>";
-            print "</tr>";
+            print "<td>
+                    <button class='btn btn-success' onclick=\"location.href='?page=editar-funcionario&id_funcionario={$row->id_funcionario}';\">Editar</button>
+                    <button class='btn btn-danger' onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar-funcionario&acao=excluir&id_funcionario={$row->id_funcionario}';}\">Excluir</button>
+                </td>";
+
+
         }
         
         print "</table>";
