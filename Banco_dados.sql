@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema concessionaria4142m
+-- Schema concessionaria
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema concessionaria4142m
+-- Schema concessionaria
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `concessionaria4142m` DEFAULT CHARACTER SET utf8 ;
-USE `concessionaria4142m` ;
+CREATE SCHEMA IF NOT EXISTS `concessionaria` DEFAULT CHARACTER SET utf8 ;
+USE `concessionaria` ;
 
 -- -----------------------------------------------------
--- Table `concessionaria4142m`.`marca`
+-- Table `concessionaria`.`marca`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `concessionaria4142m`.`marca` (
+CREATE TABLE IF NOT EXISTS `concessionaria`.`marca` (
   `id_marca` INT NOT NULL AUTO_INCREMENT,
   `nome_marca` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id_marca`))
@@ -28,9 +28,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `concessionaria4142m`.`modelo`
+-- Table `concessionaria`.`modelo`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `concessionaria4142m`.`modelo` (
+CREATE TABLE IF NOT EXISTS `concessionaria`.`modelo` (
   `id_modelo` INT NOT NULL AUTO_INCREMENT,
   `nome_modelo` VARCHAR(45) NOT NULL,
   `placa_modelo` VARCHAR(45) NULL,
@@ -41,16 +41,16 @@ CREATE TABLE IF NOT EXISTS `concessionaria4142m`.`modelo` (
   INDEX `fk_modelo_marca_idx` (`marca_id_marca` ASC) ,
   CONSTRAINT `fk_modelo_marca`
     FOREIGN KEY (`marca_id_marca`)
-    REFERENCES `concessionaria4142m`.`marca` (`id_marca`)
+    REFERENCES `concessionaria`.`marca` (`id_marca`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `concessionaria4142m`.`cliente`
+-- Table `concessionaria`.`cliente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `concessionaria4142m`.`cliente` (
+CREATE TABLE IF NOT EXISTS `concessionaria`.`cliente` (
   `id_cliente` INT NOT NULL AUTO_INCREMENT,
   `nome_cliente` VARCHAR(100) NOT NULL,
   `cpf_cliente` CHAR(11) NOT NULL,
@@ -63,9 +63,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `concessionaria4142m`.`funcionario`
+-- Table `concessionaria`.`funcionario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `concessionaria4142m`.`funcionario` (
+CREATE TABLE IF NOT EXISTS `concessionaria`.`funcionario` (
   `id_funcionario` INT NOT NULL AUTO_INCREMENT,
   `nome_funcionario` VARCHAR(100) NOT NULL,
   `cpf_funcionario` CHAR(11) NOT NULL,
@@ -76,9 +76,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `concessionaria4142m`.`venda`
+-- Table `concessionaria`.`venda`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `concessionaria4142m`.`venda` (
+CREATE TABLE IF NOT EXISTS `concessionaria`.`venda` (
   `id_venda` INT NOT NULL AUTO_INCREMENT,
   `data_venda` VARCHAR(45) NOT NULL,
   `valor_venda` DECIMAL(10,2) NOT NULL,
@@ -91,17 +91,17 @@ CREATE TABLE IF NOT EXISTS `concessionaria4142m`.`venda` (
   INDEX `fk_venda_funcionario1_idx` (`funcionario_id_funcionario` ASC) ,
   CONSTRAINT `fk_venda_cliente1`
     FOREIGN KEY (`cliente_id_cliente`)
-    REFERENCES `concessionaria4142m`.`cliente` (`id_cliente`)
+    REFERENCES `concessionaria`.`cliente` (`id_cliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_venda_modelo1`
     FOREIGN KEY (`modelo_id_modelo`)
-    REFERENCES `concessionaria4142m`.`modelo` (`id_modelo`)
+    REFERENCES `concessionaria`.`modelo` (`id_modelo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_venda_funcionario1`
     FOREIGN KEY (`funcionario_id_funcionario`)
-    REFERENCES `concessionaria4142m`.`funcionario` (`id_funcionario`)
+    REFERENCES `concessionaria`.`funcionario` (`id_funcionario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

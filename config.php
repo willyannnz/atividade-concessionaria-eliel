@@ -3,7 +3,7 @@
 define('HOST', 'localhost');
 define('USER', 'root');
 define('PASS', '');
-define('BASE', 'concessionaria4142m');
+define('BASE', 'concessionaria');
 
 $conn = new MySQLi(HOST,USER,PASS,BASE);
 ?>

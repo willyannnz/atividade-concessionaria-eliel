@@ -11,7 +11,7 @@
         print "<p>Encontrou <b>$qtd</b> resultado(s)</p>";
         print "<table class='table table-bordered table-striped table-hover'>";
         print "<tr>";
-        print "<th>#</th>";
+        print "<th>ID</th>";
         print "<th>Nome</th>";
         print "<th>Email</th>";
         print "<th>Telefone</th>"; 
