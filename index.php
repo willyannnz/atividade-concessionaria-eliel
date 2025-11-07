@@ -56,7 +56,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="?page=cadastrar-marca">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="#">Listar</a></li>
+            <li><a class="dropdown-item" href="?page=listar-marca">Listar</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">

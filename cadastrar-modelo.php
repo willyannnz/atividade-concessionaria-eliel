@@ -22,11 +22,23 @@
             <input type="text" name="dt_nasc_modelo" class="form-control">
         </label>
     </div>
-    <div class="mb-3">
-        <label>Marca
-            <input type="text" name="fone_modelo" class="form-control">
-        </label>
-    <div>
+   <div class="mb-3">
+        <label>Marca</label>
+        <select name="marca_id_marca" class="form-select">
+            <option>Selecione uma Marca</option>
+            <?php
+                // Busca todas as marcas no banco
+                $sql_marcas = "SELECT * FROM marca";
+                $res_marcas = $conn->query($sql_marcas);
+                
+                if ($res_marcas->num_rows > 0) {
+                    while ($row_marca = $res_marcas->fetch_object()) {
+                        print "<option value='{$row_marca->id_marca}'>{$row_marca->nome_marca}</option>";
+                    }
+                }
+            ?>
+        </select>
+        <p></p>
         <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
 </div>
