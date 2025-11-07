@@ -18,7 +18,7 @@
         print "<th>Email</th>";
         print "<th>Telefone</th>"; 
         print "<th>CPF</th>"; 
-        print "<th>Editar ou EXCLUIR</th>"; 
+        print "<th>Ações</th>"; 
         print "</tr>";
         
         while($row = $res->fetch_object()){
