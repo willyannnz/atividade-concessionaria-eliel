@@ -78,7 +78,7 @@
   </div>
 </nav>
 
-<div class = "container.mt-3"> 
+<div class = "container mt-3"> 
     <div class = "row">
         <div class = "col">
             <?php

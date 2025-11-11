@@ -22,7 +22,7 @@
     <div class="mb-3">
         <label>Marca</label>
         <select name="marca_id_marca" class="form-select">
-            <option>-- Selecione uma Marca --</option>
+            <option>Selecione uma Marca</option>
             <?php
                 // Busca todas as marcas no banco
                 $sql_marcas = "SELECT * FROM marca";
