@@ -1,20 +1,20 @@
 <div class="container mt-4">
     <h1>Listagem de Modelos</h1>
     <?php
-        // CORREÇÃO: Usamos INNER JOIN para buscar o NOME da marca
+        // ESTA CONSULTA ESTÁ CORRETA
         $sql = "SELECT 
                     m.id_modelo, 
                     m.nome_modelo, 
                     m.placa_modelo, 
                     m.cor_modelo, 
                     m.ano_modelo, 
-                    b.nome_marca  -- <-- Traz o nome da marca
+                    b.nome_marca
                 FROM 
-                    modelo AS m   -- "m" é um apelido para a tabela modelo
+                    modelo AS m
                 INNER JOIN 
-                    marca AS b    -- "b" é um apelido para a tabela marca
+                    marca AS b
                 ON 
-                    m.marca_id_marca = b.id_marca"; // <-- A condição de ligação
+                    m.marca_id_marca = b.id_marca";
 
         $res = $conn->query($sql);
         $qtd = $res->num_rows;
@@ -28,7 +28,7 @@
             print "<th>Placa</th>";
             print "<th>Cor</th>";
             print "<th>Ano</th>";
-            print "<th>Marca</th>"; // <-- Coluna que estava com erro
+            print "<th>Marca</th>";
             print "<th>Ações</th>";
             print "</tr>";
             print "</thead>";
@@ -40,7 +40,7 @@
                 print "<td>{$row->placa_modelo}</td>";
                 print "<td>{$row->cor_modelo}</td>";
                 print "<td>{$row->ano_modelo}</td>";
-                // CORREÇÃO: Imprimir o 'nome_marca' que veio do JOIN
+                // ESTE PRINT TAMBÉM ESTÁ CORRETO
                 print "<td>{$row->nome_marca}</td>"; 
                 print "<td>
                         <button onclick=\"location.href='?page=editar-modelo&id_modelo={$row->id_modelo}';\" class='btn btn-success btn-sm'>Editar</button>

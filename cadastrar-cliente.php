@@ -1,9 +1,9 @@
 <div class="container mt-4">
 <h1>Cadastro Cliente</h1>
-<form action="?page=cadastrar-cliente" method="POST">
+<form action="?page=salvar-cliente" method="POST">
     <input type="hidden" name="acao" value="cadastrar">
     <div class="mb-3">
-        <label>Nome 
+        <label>
             <input type="text" name="nome_cliente" class="form-control input">
         </label>
     </div>

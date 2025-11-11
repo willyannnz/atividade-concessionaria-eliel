@@ -1,14 +1,13 @@
 <div class="container mt-4">
     <h1>Listagem de Marcas</h1>
     <?php
-        // 1. Consulta SQL simples para buscar todas as marcas
         $sql = "SELECT * FROM marca";
 
         $res = $conn->query($sql);
         $qtd = $res->num_rows;
 
         if ($qtd > 0) {
-            // 2. Inicia a tabela
+            print "<p>Encontrou <b>$qtd</b> resultado(s)</p>";
             print "<table class='table table-hover table-striped table-bordered'>";
             print "<thead>";
             print "<tr>";

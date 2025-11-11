@@ -38,7 +38,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="?page=cadastrar-cliente">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="#">Listar</a></li>
+            <li><a class="dropdown-item" href="?page=listar-cliente">Listar</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -47,7 +47,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="?page=cadastrar-modelo">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="#">Listar</a></li>
+            <li><a class="dropdown-item" href="?page=listar-modelo">Listar</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -65,7 +65,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="?page=cadastrar-venda">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="#">Listar</a></li>
+            <li><a class="dropdown-item" href="?page=listar-venda">Listar</a></li>
           </ul>
         </li>
     
