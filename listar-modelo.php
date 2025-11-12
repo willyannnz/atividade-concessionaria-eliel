@@ -23,7 +23,7 @@
             print "<table class='table table-hover table-striped table-bordered'>";
             print "<thead>";
             print "<tr>";
-            print "<th>#</th>";
+            print "<th>ID</th>";
             print "<th>Nome do Modelo</th>";
             print "<th>Placa</th>";
             print "<th>Cor</th>";
