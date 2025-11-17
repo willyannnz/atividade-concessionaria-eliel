@@ -70,9 +70,12 @@
         </li>
     
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
-        <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+      <form class="d-flex" role="search" action="index.php" method="POST">
+      <input type="hidden" name="page" value="pesquisar">
+      
+      <input class="form-control me-2" type="search" name="query_busca" placeholder="Buscar modelo..." aria-label="Search">
+      
+      <button class="btn btn-outline-light" type="submit">Buscar</button>
       </form>
     </div>
   </div>
@@ -149,9 +152,38 @@
                 case 'salvar-venda':
                     include('salvar-venda.php');
                     break;
-                  default:
-                    echo "<h1>Bem vindo a ELITE CAR!</h1>";
+                case 'pesquisar':
+                    include('pesquisar.php');
                     break;
+
+                default:
+                  print "
+                      <div class='p-5 mb-4 bg-light rounded-3'>
+                          <div class='container-fluid py-5'>
+                              <h1 class='display-5 fw-bold'>Bem-vindo à EliteCar</h1>
+                              <p class='col-md-8 fs-4'>Encontre o carro dos seus sonhos com a melhor qualidade e procedência. Navegue pelo nosso catálogo e descubra ofertas imperdíveis.</p>
+                              <a href='?page=listar-modelo' class='btn btn-primary btn-lg' type='button'>Ver Carros Disponíveis</a>
+                          </div>
+                      </div>
+                      
+                      <div class='row align-items-md-stretch'>
+                          <div class='col-md-6'>
+                              <div class='h-100 p-5 text-bg-dark rounded-3'>
+                                  <h2>Cadastre seu Veículo</h2>
+                                  <p>Quer vender seu carro? Cadastre o modelo em nosso sistema para avaliação.</p>
+                                  <a href='?page=cadastrar-modelo' class='btn btn-outline-light' type='button'>Cadastrar Modelo</a>
+                              </div>
+                          </div>
+                          <div class='col-md-6'>
+                              <div class='h-100 p-5 bg-body-tertiary border rounded-3'>
+                                  <h2>Equipe de Vendas</h2>
+                                  <p>Conheça nossos profissionais prontos para lhe atender.</p>
+                                  <a href='?page=listar-funcionario' class='btn btn-outline-secondary' type='button'>Ver Funcionários</a>
+                              </div>
+                          </div>
+                      </div>
+                  ";
+                  break;
             }
             ?>
         </div>    
