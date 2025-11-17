@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concessionária</title>
+    <title>EliteCar - Veículos</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/velo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -170,22 +171,22 @@
                     <div id="carouselExampleAutoplaying" class="carousel slide mb-4" data-bs-ride="carousel">
                       <div class="carousel-inner rounded-3">
                         <div class="carousel-item active">
-                          <img src="img/e.jpg" class="d-block w-100" alt="Bem vindo">
+                          <img src="img/e.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Bem vindo">
                         </div>
                         <div class="carousel-item">
-                          <img src="img/f.jpg" class="d-block w-100" alt="Carros">
+                          <img src="img/f.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Carros">
                         </div>
                         <div class="carousel-item">
-                          <img src="img/d.jpg" class="d-block w-100" alt="Carros">
+                          <img src="img/d.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Carros">
                         </div>
                         <div class="carousel-item">
-                          <img src="img/a.jpg" class="d-block w-100" alt="Carros">
+                          <img src="img/a.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;"alt="Carros">
                         </div>
                         <div class="carousel-item">
-                          <img src="img/b.jpg" class="d-block w-100" alt="Carros">
+                          <img src="img/b.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Carros">
                         </div>
                         <div class="carousel-item">
-                          <img src="img/c.jpg" class="d-block w-100" alt="Carros">
+                          <img src="img/c.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Carros">
                         </div>
                       </div>
                       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
