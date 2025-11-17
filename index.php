@@ -157,33 +157,66 @@
                     break;
 
                 default:
-                  print "
-                      <div class='p-5 mb-4 bg-light rounded-3'>
-                          <div class='container-fluid py-5'>
-                              <h1 class='display-5 fw-bold'>Bem-vindo à EliteCar</h1>
-                              <p class='col-md-8 fs-4'>Encontre o carro dos seus sonhos com a melhor qualidade e procedência. Navegue pelo nosso catálogo e descubra ofertas imperdíveis.</p>
-                              <a href='?page=listar-modelo' class='btn btn-primary btn-lg' type='button'>Ver Carros Disponíveis</a>
-                          </div>
+                    ?>
+                    
+                    <div class="p-5 mb-4 bg-light rounded-3">
+                        <div class="container-fluid py-5">
+                            <h1 class="display-5 fw-bold">Bem-vindo à EliteCar</h1>
+                            <p class="col-md-8 fs-4">Encontre o carro dos seus sonhos com a melhor qualidade e procedência.</p>
+                            <a href="?page=listar-modelo" class="btn btn-primary btn-lg" type="button">Ver Estoque</a>
+                        </div>
+                    </div>
+
+                    <div id="carouselExampleAutoplaying" class="carousel slide mb-4" data-bs-ride="carousel">
+                      <div class="carousel-inner rounded-3">
+                        <div class="carousel-item active">
+                          <img src="img/e.jpg" class="d-block w-100" alt="Bem vindo">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/f.jpg" class="d-block w-100" alt="Carros">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/d.jpg" class="d-block w-100" alt="Carros">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/a.jpg" class="d-block w-100" alt="Carros">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/b.jpg" class="d-block w-100" alt="Carros">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/c.jpg" class="d-block w-100" alt="Carros">
+                        </div>
                       </div>
-                      
-                      <div class='row align-items-md-stretch'>
-                          <div class='col-md-6'>
-                              <div class='h-100 p-5 text-bg-dark rounded-3'>
-                                  <h2>Cadastre seu Veículo</h2>
-                                  <p>Quer vender seu carro? Cadastre o modelo em nosso sistema para avaliação.</p>
-                                  <a href='?page=cadastrar-modelo' class='btn btn-outline-light' type='button'>Cadastrar Modelo</a>
-                              </div>
-                          </div>
-                          <div class='col-md-6'>
-                              <div class='h-100 p-5 bg-body-tertiary border rounded-3'>
-                                  <h2>Equipe de Vendas</h2>
-                                  <p>Conheça nossos profissionais prontos para lhe atender.</p>
-                                  <a href='?page=listar-funcionario' class='btn btn-outline-secondary' type='button'>Ver Funcionários</a>
-                              </div>
-                          </div>
-                      </div>
-                  ";
-                  break;
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                      </button>
+                    </div>
+
+                    <div class="row align-items-md-stretch">
+                        <div class="col-md-6">
+                            <div class="h-100 p-5 text-bg-dark rounded-3">
+                                <h2>Cadastre seu Veículo</h2>
+                                <p>Quer vender seu carro? Cadastre o modelo em nosso sistema.</p>
+                                <a href="?page=cadastrar-modelo" class="btn btn-outline-light" type="button">Cadastrar Modelo</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+                                <h2>Equipe de Vendas</h2>
+                                <p>Conheça nossos profissionais prontos para lhe atender.</p>
+                                <a href="?page=listar-funcionario" class="btn btn-outline-secondary" type="button">Ver Funcionários</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p></p>
+                    <?php
+                    break;
             }
             ?>
         </div>    
