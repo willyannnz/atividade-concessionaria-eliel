@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand banner-titulo" href="#"><i class="fa-solid fa-gauge-high"></i> EliteCar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -199,6 +199,43 @@
                       </button>
                     </div>
 
+                    <?php
+                    // Consultas para contar os registros
+                    $qtd_carros = $conn->query("SELECT count(*) as total FROM modelo")->fetch_object()->total;
+                    $qtd_vendas = $conn->query("SELECT count(*) as total FROM venda")->fetch_object()->total;
+                    $qtd_clientes = $conn->query("SELECT count(*) as total FROM cliente")->fetch_object()->total;
+
+                    print '
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="card text-bg-primary mb-3">
+                                <div class="card-header"><i class="fa-solid fa-car"></i> Veículos</div>
+                                <div class="card-body">
+                                    <h1 class="card-title display-4">'.$qtd_carros.'</h1>
+                                    <p class="card-text">Modelos cadastrados no estoque.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-bg-success mb-3">
+                                <div class="card-header"><i class="fa-solid fa-cash-register"></i> Vendas</div>
+                                <div class="card-body">
+                                    <h1 class="card-title display-4">'.$qtd_vendas.'</h1>
+                                    <p class="card-text">Vendas realizadas até hoje.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-bg-info mb-3 text-white">
+                                <div class="card-header"><i class="fa-solid fa-users"></i> Clientes</div>
+                                <div class="card-body">
+                                    <h1 class="card-title display-4">'.$qtd_clientes.'</h1>
+                                    <p class="card-text">Clientes ativos na base.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
+                    ?>
                     <div class="row align-items-md-stretch">
                         <div class="col-md-6">
                             <div class="h-100 p-5 text-bg-dark rounded-3">
