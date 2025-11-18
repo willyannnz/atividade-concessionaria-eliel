@@ -18,3 +18,13 @@ th {
 .input {
     width: 100%; 
 }
+
+.box-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.box-hover:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important; 
+}
+

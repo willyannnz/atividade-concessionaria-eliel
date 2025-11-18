@@ -1,7 +1,7 @@
 <div class="container mt-4">
     <h1>Listagem de Modelos</h1>
     <?php
-        // ESTA CONSULTA ESTÁ CORRETA
+    
         $sql = "SELECT 
                     m.id_modelo, 
                     m.nome_modelo, 
@@ -20,6 +20,7 @@
         $qtd = $res->num_rows;
 
         if ($qtd > 0) {
+            print "<p>Encontrou <b>$qtd</b> resultado(s)</p>";
             print "<table class='table table-hover table-striped table-bordered'>";
             print "<thead>";
             print "<tr>";
