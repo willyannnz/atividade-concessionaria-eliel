@@ -32,15 +32,15 @@
         <select name="marca_id_marca" class="form-select">
             <option>-- Selecione uma Marca --</option>
             <?php
-                // Busca todas as marcas
+                
                 $sql_marcas = "SELECT * FROM marca";
                 $res_marcas = $conn->query($sql_marcas);
                 
                 if ($res_marcas->num_rows > 0) {
                     while ($row_marca = $res_marcas->fetch_object()) {
-                        // Verifica se esta é a marca atual do modelo
+                       
                         if ($row_marca->id_marca == $row->marca_id_marca) {
-                            // Se for, adiciona o 'selected'
+                          
                             print "<option value='{$row_marca->id_marca}' selected>{$row_marca->nome_marca}</option>";
                         } else {
                             print "<option value='{$row_marca->id_marca}'>{$row_marca->nome_marca}</option>";
